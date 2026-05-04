@@ -11,7 +11,13 @@ app_ui = ui.page_fluid(
             ui.input_numeric("dilution_factor", "Serial Dilution (1:X):", 3.0),
             ui.input_numeric("points", "Number of Points:", 7),
             ui.input_numeric("transfer_vol", "Transfer Volume (nL):", 20.0),
-            ui.input_numeric("assay_vol", "Assay Volume (µL):", 5.0)
+            ui.input_numeric("assay_vol", "Assay Volume (µL):", 5.0),
+            ui.br(),
+            # Discreet credit in gray
+            ui.div(
+                "Made by Colin Gordy", 
+                style="color: gray; font-size: 0.8em; font-style: italic; margin-top: 20px;"
+            )
         ),
         ui.h4("Final Well Concentrations"),
         ui.output_data_frame("dose_table"),
